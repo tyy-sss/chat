@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="847.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.view.enter.HomePageController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="109.0">
+         <image>
+            <Image url="@../pictures/nxjkw.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="avatar" fitHeight="61.0" fitWidth="67.0" layoutX="29.0" layoutY="7.0" onMouseClicked="#showYou">
+         <image>
+            <Image url="@../pictures/woman.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="name" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="98.0" prefHeight="30.0" prefWidth="100.0" />
+      <ListView fx:id="listView" layoutX="108.0" layoutY="55.0" prefHeight="546.0" prefWidth="221.0" />
+      <TextField fx:id="search" layoutX="117.0" layoutY="15.0" onKeyPressed="#search" />
+      <ListView fx:id="showListView" layoutX="329.0" layoutY="38.0" prefHeight="371.0" prefWidth="518.0" />
+      <TextField fx:id="message" alignment="TOP_LEFT" layoutX="329.0" layoutY="455.0" prefHeight="147.0" prefWidth="518.0" />
+      <Button layoutX="778.0" layoutY="543.0" mnemonicParsing="false" onMouseClicked="#sendMessage" text="发送" />
+      <Label fx:id="id" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="68.0" prefHeight="30.0" prefWidth="100.0">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <TextField fx:id="friendName" alignment="TOP_CENTER" layoutX="329.0" prefHeight="40.0" prefWidth="518.0" />
+      <ImageView fitHeight="49.0" fitWidth="60.0" layoutX="33.0" layoutY="328.0" onMouseClicked="#addFriend">
+         <image>
+            <Image url="@../pictures/addFriend.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="37.0" layoutY="390.0" onMouseClicked="#showYour">
+         <image>
+            <Image url="@../pictures/message1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="60.0" layoutX="33.0" layoutY="439.0" onMouseClicked="#groupCreat">
+         <image>
+            <Image url="@../pictures/add1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="38.0" layoutY="494.0" onMouseClicked="#passwordAgain">
+         <image>
+            <Image url="@../pictures/passw.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="file" fitHeight="40.0" fitWidth="39.0" layoutX="433.0" layoutY="413.0" onMouseClicked="#openFile">
+         <image>
+            <Image url="@../pictures/rcd-folder.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pic" fitHeight="40.0" fitWidth="39.0" layoutX="385.0" layoutY="413.0" onMouseClicked="#openPic">
+         <image>
+            <Image url="@../pictures/cefk.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="emoji" fitHeight="40.0" fitWidth="39.0" layoutX="337.0" layoutY="413.0" onMouseClicked="#openEmoji">
+         <image>
+            <Image url="@../pictures/vwhj.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="615.0" layoutY="413.0" onMouseClicked="#addComment">
+         <image>
+            <Image url="@../pictures/add1.png" />
+         </image>
+      </ImageView>
+      <TextFlow fx:id="messageShow" layoutX="329.0" layoutY="455.0" prefHeight="147.0" prefWidth="518.0" />
+      <ScrollPane fx:id="emojiShow" layoutX="333.0" layoutY="209.0" prefHeight="200.0" prefWidth="266.0">
+         <content>
+            <TextFlow fx:id="showEmoji" prefHeight="210.0" prefWidth="330.0" />
+         </content>
+      </ScrollPane>
+      <MenuButton fx:id="comment" layoutX="515.0" layoutY="413.0" mnemonicParsing="false" onMouseClicked="#checkComment" prefHeight="40.0" prefWidth="100.0" text="常用语">
+        <items>
+            <MenuItem fx:id="item1" mnemonicParsing="false" text="哦。" />
+            <MenuItem fx:id="item2" mnemonicParsing="false" text="你现在在干什么?" />
+            <MenuItem fx:id="item3" mnemonicParsing="false" text="好的，好的，我知道了。" />
+            <MenuItem fx:id="item4" mnemonicParsing="false" text="是吗？" />
+        </items>
+      </MenuButton>
+      <Rectangle fx:id="blank" arcHeight="5.0" arcWidth="5.0" fill="#e8eff5" height="607.0" layoutX="329.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="524.0" />
+   </children>
+</AnchorPane>

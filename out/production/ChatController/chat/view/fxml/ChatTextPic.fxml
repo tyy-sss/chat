@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="206.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.view.utils.ChatTextPicController">
+   <children>
+      <ImageView fx:id="avatar" fitHeight="38.0" fitWidth="37.0" layoutX="14.0" layoutY="29.0">
+         <image>
+            <Image url="@../pictures/man.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="id" layoutX="60.0" layoutY="35.0" nodeOrientation="RIGHT_TO_LEFT" strokeType="OUTSIDE" strokeWidth="0.0" text="id：" textAlignment="RIGHT" wrappingWidth="53.0" />
+      <Text fx:id="time" layoutX="169.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="160.0" />
+      <ImageView fx:id="pic" fitHeight="150.0" fitWidth="200.0" layoutX="60.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="521.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.view.enter.DeleteGroupController">
+   <children>
+      <TabPane prefHeight="520.0" prefWidth="651.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="群资料">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="481.0" prefWidth="480.0">
+                     <children>
+                        <Label layoutX="41.0" layoutY="45.0" text="群名称">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="164.0" text="群成立时间">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="210.0" text="群头像">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="time" layoutX="164.0" layoutY="165.0" prefHeight="20.0" prefWidth="181.0" textFill="#b10d0d">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="group" fitHeight="150.0" fitWidth="200.0" layoutX="169.0" layoutY="210.0" onMouseClicked="#groupPicture" pickOnBounds="true" preserveRatio="true" />
+                        <TextField fx:id="nameGroup" layoutX="161.0" layoutY="42.0" />
+                        <Button fx:id="change" layoutX="254.0" layoutY="420.0" mnemonicParsing="false" onMouseClicked="#changeGroup" prefHeight="30.0" prefWidth="88.0" text="修改" />
+                        <Text fx:id="name" fill="#b10d0d" layoutX="162.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="41.0" layoutY="109.0" text="群账号">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="id" layoutX="162.0" layoutY="110.0" prefHeight="20.0" prefWidth="215.0" textFill="#b10d0d">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="群成员">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="deleteGroup" layoutX="54.0" layoutY="304.0" mnemonicParsing="false" onMouseClicked="#deleteGroup" prefHeight="39.0" prefWidth="99.0" text="解散该群">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="outGroup" layoutX="54.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#outGroup" prefHeight="39.0" prefWidth="99.0" text="退出该群">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="showMember" layoutX="238.0" prefHeight="482.0" prefWidth="415.0" />
+                        <ImageView fx:id="groupShow" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="群管理">
+               <content>
+                  <Accordion>
+                    <panes>
+                      <TitledPane fx:id="setManagement" animated="false" text="成员设置">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="showPeople" prefHeight="246.0" prefWidth="651.0" />
+                                    <Button fx:id="set" layoutX="80.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#setManagements" text="设置管理员">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font></Button>
+                                    <Button fx:id="delete" layoutX="386.0" layoutY="266.0" mnemonicParsing="false" onMouseClicked="#outManagements" text="撤销管理员">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="changGroup" layoutX="235.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#groupChangePeople" text="转让群主">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                      </TitledPane>
+                      <TitledPane animated="false" text="邀请好友">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="76.0" fitWidth="73.0" layoutX="9.0" layoutY="13.0" onMouseClicked="#addPeople">
+                                       <image>
+                                          <Image url="@../pictures/add1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

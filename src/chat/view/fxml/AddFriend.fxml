@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.view.enter.AddFriendController">
+   <children>
+      <ImageView fitHeight="442.0" fitWidth="587.0" layoutX="-6.0" layoutY="-7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../pictures/backBase.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="searchId" layoutX="171.0" layoutY="80.0" />
+      <Label layoutX="50.0" layoutY="80.0" prefHeight="30.0" prefWidth="108.0" text="输入ID搜索">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button layoutX="408.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#search" text="确定" />
+      <ListView fx:id="listView" layoutX="-1.0" layoutY="131.0" prefHeight="313.0" prefWidth="587.0" />
+   </children>
+</AnchorPane>

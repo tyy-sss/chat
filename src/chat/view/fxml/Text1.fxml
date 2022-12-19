@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="onLine" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#watch" prefHeight="77.0" prefWidth="195.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.view.utils.Text1Controller">
+   <children>
+      <ImageView fx:id="avatar" fitHeight="43.0" fitWidth="43.0" layoutX="14.0" layoutY="17.0" onMouseClicked="#checkMessage">
+         <image>
+            <Image url="@../pictures/message.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="friendId" layoutX="71.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="114.0" />
+      <Text fx:id="friendName" layoutX="71.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="114.0" />
+   </children>
+</AnchorPane>
